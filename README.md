@@ -4,8 +4,10 @@ This repository comprises work and planning for Holden Rohrer, Holden Watson, an
 
 ## Structure
 
-TeX documents are used to create written documents and should be compiled with `pdftex` in the main directory, as provided by your software distributor (e.g. MacTeX or TeX Live). Example:
+TeX documents are used to create pdfs and should be compiled with `pdftex` in the main directory, as provided by your software distributor (e.g. MacTeX or TeX Live). Example:
 
 ``
 pdftex main.tex
 ``
+
+Note that pdf archives have also been included but may be out of date.
