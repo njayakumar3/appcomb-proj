@@ -1,11 +1,23 @@
+%% Links
+\def\link#1{%
+  \pdfstartlink
+    user{/Subtype /Link
+    /Border [ 0 0 0 ]
+    /A <<
+      /Type /Action
+      /S /URI
+      /URI (#1)
+    >>}%
+    {\it #1}%
+  \pdfendlink
+}
+
 %% Fonts
 \font\fourteenbf=cmbx12 at 14pt
 \font\fourteenrm=cmr12 at 14pt
 \font\twelverm=cmr12
 
 %% Header
-\newskip\megskipamount \megskipamount=18pt plus 6pt minus 6pt
-\def\megskip{\vskip\megskipamount}
 {\obeylines\parindent=0in
 Holden Rohrer, Holden Watson, and Nithya Jayakumar
 2019 Oct 21
@@ -13,9 +25,9 @@ Applied Combinatorics--Math 3012
 Livshyts
 \medskip
 }
-\def\titlesub#1#2{\centerline{\fourteenbf #1}\centerline{#2}\megskip}
+\def\titlesub#1#2{\centerline{\fourteenbf #1}\centerline{#2}\bigskip}
 \newcount\sections \newcount\subsections
 \outer\def\section#1\par{\advance\sections by 1\thesection{#1}}
-\def\thesection#1{\vskip .3\hsize\goodbreak\vskip -.3\hsize\noindent{\fourteenrm\the\sections\ #1\bigskip}}
+\def\thesection#1{\vskip .3\hsize\goodbreak\vskip -.3\hsize\bigskip\noindent{\fourteenrm\the\sections\ #1\bigskip}}
 \outer\def\subsection#1\par{\advance\subsections by 1\thesubsection{#1}}
-\def\thesubsection#1{\vskip .15\hsize\goodbreak\vskip -.15\hsize\noindent{\twelverm\the\sections.\the\subsections\ #1\medskip}}
+\def\thesubsection#1{\vskip .15\hsize\goodbreak\vskip -.15\hsize\medskip\noindent{\twelverm\the\sections.\the\subsections\ #1\medskip}}
